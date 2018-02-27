@@ -1,0 +1,319 @@
+
+% ISASS Macros
+
+% Formatting for blue text box
+\newcommand\bluebox[1]{\fcolorbox[cmyk]{0,0,0,0.5}{0.3659,0.1351,0.0077,0}{#1}}
+
+% Formatting for capability two-pager headers
+\newcommand\capabilityheader[2]{
+\begin{minipage}[t]{\linewidth}
+  \bluebox{
+    \begin{minipage}{3.25in}
+      \paragraph{Description}
+      \label{description}
+      {#2}
+    \end{minipage}
+    }
+  \begin{minipage}{3.25in}
+    \begin{figure}[H]
+      \includegraphics[keepaspectratio,width=2.5in,height=0.75\textheight]{#1}
+      \label{#1}
+    \end{figure}
+  \end{minipage}
+\end{minipage}
+}
+
+% \newcommand\msnsysheader[3]{
+%   \bluebox{
+%     \begin{minipage}{0.975\linewidth}
+%     \textbf{Description:}\\
+%       {#2}
+%     \end{minipage}
+%   }
+
+%   \begin{minipage}[t]{\linewidth}
+%     \begin{minipage}{0.6\linewidth}
+%       \begin{figure}[H]
+%         \includegraphics[width=0.95\linewidth,keepaspectratio]{#1}
+%         \label{#1}
+%       \end{figure}
+%     \end{minipage}
+%     \bluebox{
+%       \begin{minipage}{0.34\linewidth}
+%         \paragraph{Major Components:}
+%         \label{description}
+%         {#3}
+%       \end{minipage}
+%       }
+%   \end{minipage}
+% }
+
+\newcommand\msnsysheader[3]{
+  % \bluebox{
+    % \begin{minipage}{0.975\linewidth}
+    \textbf{Description:}\\
+      {#2}
+    % \end{minipage}
+  % }
+
+  \begin{minipage}[t]{\linewidth}
+    \begin{minipage}{0.6\linewidth}
+      \begin{figure}[H]
+        \includegraphics[width=0.95\linewidth,keepaspectratio]{#1}
+        \label{#1}
+      \end{figure}
+    \end{minipage}
+    % \bluebox{
+      \begin{minipage}{0.34\linewidth}
+        \paragraph{Major Components:}
+        \label{description}
+        {#3}
+      \end{minipage}
+      % }
+  \end{minipage}
+}
+%
+% Code from CPF Reformatting
+% %
+% % Define Page Styles
+% %
+\pagestyle{fancy}
+% \setlength\hoffset{-0.2in}
+% \setlength\topmargin{-20pt}
+% \setlength\textheight{600pt}
+% \setlength\footskip{50pt}
+\renewcommand{\headrulewidth}{0.0pt}
+% % Hard-coded title due to mutlicolumn error
+% \lhead{\begin{tabular}[b]{|p{3.75in}|p{2.7in}|} \hline Revision:~\revision & Document No:~\documentnumber\\ \hline Release Date:~\releasedate&Page:~\thepage~of~\pageref{LastPage}\\ \hline \multicolumn{2}{|l|}{Title:~Mission Concept of Operations}\\ \hline \end{tabular}}
+\lhead{}
+\chead{}
+\rhead{}
+\cfoot{\thepage}
+
+
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \fancyfoot[C]{\thepage}
+%    \setlength\topmargin{-40pt}
+%    \setlength\footskip{-65pt}
+}
+% %
+% % End Define Page Styles
+% %
+
+% % New Capitalize Macro
+% \makeatletter
+% \newcommand{\Capitalize}[1]{%
+%   \edef\@tempa{\expandafter\@gobble\string#1}%
+%   \edef\@tempb{\expandafter\@car\@tempa\@nil}%
+%   \edef\@tempa{\expandafter\@cdr\@tempa\@nil}%
+%   \uppercase\expandafter{\expandafter\def\expandafter\@tempb\expandafter{\@tempb}}%
+%   \@namedef{\@tempb\@tempa}{\expandafter\MakeUppercase\expandafter{#1}}}
+% \makeatother
+% % End New Capitalize Macro
+
+
+% \makeatletter
+% \let\ps@plain\ps@fancy
+% \makeatother
+
+% % Formatting of TOC
+
+% %
+% % Redefine document section hyperref labels
+% %
+% \def\subsubsectionautorefname{Section}
+% \def\subsectionautorefname{Section}
+% %
+% % Complete hyperref label redefinition
+% %
+
+% % \tightlists
+% \setlist{itemsep=.1mm, topsep=0mm}
+% \setlist[enumerate,1]{leftmargin=0.5cm}
+% \renewcommand{\theenumi}{\alph{enumi}}
+
+% % \renewcommand*{\afterlottitle}{\vspace{0em}}
+
+
+% %
+% % Define Chapter Styles
+% %
+
+\makechapterstyle{cpf}{%
+\setlength{\afterchapskip}{\baselineskip}
+  \setlength{\beforechapskip}{\baselineskip}
+  \setlength{\headsep}{2.0\baselineskip}
+  \renewcommand*{\chapterheadstart}{\vspace*{1\baselineskip}}
+  % \renewcommand*{\chapterheadstart}{}
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\printchapternum}{\LARGE\bfseries\thechapter\space}
+  \renewcommand*{\afterchapternum}{}
+  \renewcommand{\printchaptertitle}[1]{\raggedright{##1}}
+}
+
+
+\makechapterstyle{nasasti}{%
+  \setlength{\beforechapskip}{0\baselineskip}
+  \setlength{\afterchapskip}{0\baselineskip}
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\chapnumfont}{\chaptitlefont\LARGE\bfseries}
+  \renewcommand*{\printchapternum}{\center\chapnumfont\thechapter\quad}
+  % \renewcommand*{\printchapternum}{\chapnumfont\LARGE\bfseries\center \thechapter\space}
+  \renewcommand*{\afterchapternum}{}
+  \renewcommand{\printchaptertitle}{\bfseries\LARGE}
+}
+
+\makechapterstyle{appendix}{%
+  \setlength{\afterchapskip}{\baselineskip}
+  \setlength{\beforechapskip}{\baselineskip}
+  \setlength{\headsep}{2.0\baselineskip}
+  \renewcommand*{\chapterheadstart}{}
+  \renewcommand*{\printchaptername}{\center\bfseries\LARGE Appendix\space}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\printchapternum}{\LARGE\bfseries\thechapter\space}
+  \renewcommand*{\afterchapternum}{}
+  \renewcommand{\printchaptertitle}{\center\bfseries\LARGE}
+}
+
+
+\makechapterstyle{nasasti_appendix}{%
+  \setlength{\afterchapskip}{\baselineskip}
+  \setlength{\beforechapskip}{\baselineskip}
+  \setlength{\headsep}{2.0\baselineskip}
+  \renewcommand*{\chapterheadstart}{}
+  \renewcommand*{\printchaptername}{\center\bfseries APPENDIX\space}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\printchapternum}{\normalsize\bfseries\thechapter\space}
+  \renewcommand*{\afterchapternum}{}
+  \renewcommand{\printchaptertitle}[1]{%
+    \center\bfseries\normalsize\MakeUppercase{##1}}
+}
+
+% %
+% % End Chapter Styles Definition
+% %
+
+% %
+% % Define Table Styles to enable bold first row
+% %
+% \newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+% \newcolumntype{^}{>{\currentrowstyle}}
+% \newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+% #1\ignorespaces
+% }
+% %
+% % End Table Style Definition
+% %
+
+
+% %
+% %
+% % Define Table of Contents, Figures, Tables, Appendices Formatting
+% %
+\renewcommand{\contentsname}{\LARGE Table of Contents}
+% \renewcommand{\listfigurename}{\normalsize TABLE OF FIGURES}
+% \renewcommand{\cftfigurename}{FIGURE\space}
+% \renewcommand{\listtablename}{\normalsize TABLE OF TABLES}
+% \renewcommand{\cfttablename}{TABLE\space}
+% \renewcommand{\cftappendixname}{\normalsize Appendix\space}
+% \renewcommand{\cftchapteraftersnum}{.0}
+\renewcommand{\cftchapterfont}{\normalfont}
+\renewcommand{\cftchapterpagefont}{\normalfont}
+% \renewcommand{\cftsectionfont}{\normalsize}
+\setlength{\cftbeforechapterskip}{0.0in}
+\setlength{\cftparskip}{6pt}
+% \setlength{\cftafterchapterskip}{10pt}
+\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
+\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries #1}
+% \renewcommand{\printloftitle}[1]{\centering\Large\bfseries #1}
+% \renewcommand{\printlottitle}[1]{\centering\Large\bfseries #1}
+% \renewcommand{\aftertoctitle}{%
+% 	\par\nobreak\normalsize\bfseries\quad SECTION\mbox{}\hfill{PAGE}\par\nobreak}
+% \renewcommand{\afterlottitle}{%
+% 	\par\nobreak}
+% \renewcommand{\afterloftitle}{%
+% 	\par\nobreak}
+% \setcounter{tocdepth}{2}
+% % End Table of Contents, Figures, Tables, Appendices Formatting
+
+
+% %
+% % Define Table of Appendices
+% %
+% \cftinsertcode{preapp}{\setcounter{tocdepth}{-10}}
+% \newcommand\apptoc{
+%   \begingroup
+%   \cftinsertcode{prenorm}{\setcounter{tocdepth}{-10}}
+%   \cftinsertcode{preapp}{\setcounter{tocdepth}{0}}
+%   \renewcommand\contentsname{\normalsize APPENDIX}
+%   \renewcommand{\aftertoctitle}{\par}
+%   \renewcommand{\cftchapteraftersnum}{}
+%   \tableofcontents*
+%  \endgroup
+% }
+% %
+% % End Table of Appendices Definitions
+% %
+
+
+%
+% Section Heading Formatting
+%
+
+\makeatletter
+\renewcommand\section{\@startsection
+ {section}{1}{0mm}%
+ {-\baselineskip}%
+ {1.0\baselineskip}%
+ {\normalfont\bfseries\Large}}%
+\makeatother
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+ {subsection}{2}{0mm}%
+ {-\baselineskip}%
+ {1.0\baselineskip}%
+ {\itshape\bfseries\Large}}%
+\makeatother
+
+\makeatletter
+\renewcommand\subsubsection{\@startsection
+ {subsubsection}{3}{0mm}%
+ {-\baselineskip}%
+ {1.0\baselineskip}%
+ {\itshape\Large}}%
+\makeatother
+
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{\baselineskip}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection
+ {paragraph}{4}{0mm}%
+ {-\baselineskip}%
+ {1.0\baselineskip}%
+ {\normalfont\bfseries\normalsize}}%
+\makeatother
+
+% \makeatletter
+% \renewcommand\subparagraph{\@startsection
+%  {subparagraph}{5}{0mm}%
+%  {-\baselineskip}%
+%  {1.0\baselineskip}%
+%  {\normalfont\bfseries\normalsize}}%
+% \makeatother
+
+% \setsecheadstyle{\bfseries\raggedright\MakeUppercase}
+% \setsubsecheadstyle{\bfseries\raggedright}
+% %
+% % End Section Heading Formatting
+% %
+
+% \makeatletter
+% \let\ps@plain\ps@fancy
+% \makeatother

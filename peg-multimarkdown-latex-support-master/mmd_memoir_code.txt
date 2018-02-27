@@ -1,0 +1,48 @@
+latex input:		mmd-memoir-header-cpf
+Title:				MMD Memoir Code
+Author:				Author
+Date:				10 January 1231
+Base Header Level:	2  
+latex mode:			memoir  
+BibTex:				clarreo_conops
+bibliostyle:		chicago
+Subtitle:			Subtitle
+Affiliation:		Affiliation
+Address:			Address
+Phone:				757-123-1232
+Email:				kjsdf@duk.eor
+latex input:		mmd-memoir-begin-doc-cpf  
+latex footer:		mmd-memoir-footer-cpf
+
+<!--\lstset{language=TeX} -->
+
+`mmd-memoir-header-cpf.tex`
+<!--\VerbatimInput{mmd-memoir-header-cpf.tex} -->
+
+`mmd-memoir-setup-cpf.tex`
+<!--\VerbatimInput{mmd-memoir-setup-cpf.tex} -->
+
+`mmd-memoir-layout-8.5x11-cpf`
+<!--\VerbatimInput{mmd-memoir-layout-8.5x11-cpf} -->
+
+`mmd-memoir-packages-cpf`
+<!--\VerbatimInput{mmd-memoir-packages-cpf} -->
+
+`mmd-default-metadata-cpf`
+<!--\VerbatimInput{mmd-default-metadata-cpf} -->
+
+`mmd-natbib-plain`
+<!--\VerbatimInput{mmd-natbib-plain} -->
+
+
+`mmd-memoir-begin-doc-cpf`
+<!--\VerbatimInput{mmd-memoir-begin-doc-cpf} -->
+
+`mmd-title-cpf`
+<!--\VerbatimInput{mmd-title-cpf} -->
+
+`mmd-memoir-copyright-cpf`
+<!--\VerbatimInput{mmd-memoir-copyright-cpf} -->
+
+`mmd-memoir-footer-cpf`
+<!--\VerbatimInput{mmd-memoir-footer-cpf} -->

@@ -1,0 +1,43 @@
+\makeatletter
+
+\renewcommand\appendix{\@ifstar{\loneappendix}{\anappendix}}
+
+\newcounter{appndx}
+\setcounter{appndx}{0}
+
+\newcommand \loneappendix [1]{
+  \clearpage
+  \setcounter{appndx}{1}
+  \setcounter{figure}{0}
+  \renewcommand\thefigure{\Alph{appndx}-\@arabic\c@figure}
+  \setcounter{table}{0}
+  \renewcommand\thetable{\Alph{appndx}-\arabic{table}}
+  \setcounter{equation}{0}
+  \renewcommand\theequation {\Alph{appndx}-\arabic{equation}}
+  \def\appendixtitle{\appendixname: #1}
+  \addcontentsline{toc}{section}\appendixtitle
+  \theappendix\appendixtitle
+  \setcounter{page}{1}
+  \renewcommand\thepage{\Alph{appndx}-\arabic{page}}
+}
+
+\newcommand \anappendix[1]{
+  \clearpage
+  \refstepcounter{appndx}
+  \setcounter{equation}{0}
+  \setcounter{figure}{0}
+  \renewcommand\thefigure{\Alph{appndx}-\@arabic\c@figure}
+  \setcounter{table}{0}
+  \renewcommand\thetable{\Alph{appndx}-\arabic{table}}
+  \renewcommand\theequation {\Alph{appndx}-\arabic{equation}}
+  \def\appendixtitle{\appendixname~\Alph{appndx}: #1}
+  \addcontentsline{toc}{section}\appendixtitle
+  \theappendix\appendixtitle
+  \setcounter{page}{1}
+  \renewcommand\thepage{\Alph{appndx}-\arabic{page}}
+}
+\newcommand\theappendix[1]{
+  \section*{#1}
+}
+
+\makeatother

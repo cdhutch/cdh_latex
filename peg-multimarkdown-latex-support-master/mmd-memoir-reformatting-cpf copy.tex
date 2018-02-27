@@ -1,0 +1,92 @@
+\setcounter{secnumdepth}{5}
+
+
+
+\makechapterstyle{cpf}{%
+	\setlength{\afterchapskip}{\baselineskip}
+	\setlength{\beforechapskip}{\baselineskip}
+	\setlength{\headsep}{4.0\baselineskip}
+	\renewcommand*{\chapterheadstart}{}
+	\renewcommand*{\printchaptername}{}
+	\renewcommand*{\chapternamenum}{}
+	% \renewcommand*{\printchapternum}{\sffamily\normalsize\bfseries\thechapter.0\space}
+	\renewcommand*{\printchapternum}{\normalsize\bfseries\thechapter.0\space}
+	\renewcommand*{\afterchapternum}{}
+	\renewcommand{\printchaptertitle}[1]{%
+		\raggedright\normalsize\MakeUppercase{##1}}
+}
+
+\makechapterstyle{appendix}{%
+	\setlength{\afterchapskip}{\baselineskip}
+	\setlength{\beforechapskip}{\baselineskip}
+	\setlength{\headsep}{4.0\baselineskip}
+	\renewcommand*{\chapterheadstart}{}
+	\renewcommand*{\printchaptername}{\center\bfseries APPENDIX\space}
+	\renewcommand*{\chapternamenum}{}
+	% \renewcommand*{\printchapternum}{\sffamily\normalsize\bfseries\thechapter.0\space}
+	\renewcommand*{\printchapternum}{\normalsize\bfseries\thechapter\space}
+	\renewcommand*{\afterchapternum}{}
+	\renewcommand{\printchaptertitle}[1]{%
+		\center\bfseries\normalsize\MakeUppercase{##1}}
+}
+
+\raggedright
+\setlength{\parindent}{0em}
+\setlength{\parskip}{\baselineskip}
+\chapterstyle{cpf}
+\setsecheadstyle{\bfseries\raggedright\MakeUppercase}
+\setsubsecheadstyle{\bfseries\raggedright}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection
+	{paragraph}{4}{0mm}%
+	{-\baselineskip}%
+	{1.0\baselineskip}%
+	{\normalfont\bfseries\normalsize}}%
+\makeatother
+
+\makeatletter
+\renewcommand\subparagraph{\@startsection
+	{subparagraph}{5}{0mm}%
+	{-\baselineskip}%
+	{1.0\baselineskip}%
+	{\normalfont\bfseries\normalsize}}%
+\makeatother
+
+
+% \usepackage{array}
+\newcolumntype{+}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#1\ignorespaces
+}
+\counterwithin{figure}{section}
+\renewcommand\thefigure{\thesection-\arabic{figure}} 
+\counterwithin{table}{section}
+\renewcommand\thetable{\thesection-\arabic{table}}
+
+\renewcommand{\figurename}{FIGURE}
+\renewcommand{\tablename}{TABLE}
+
+% \pagestyle{fancy}
+% \setlength{\headheight}{16pt}
+% % \fancyhead[LO,RE]{\includegraphics[width=12pt, height=12pt]{logo}}
+% \fancyhead[CE]{\rightmark}
+% \fancyhead[CO]{\leftmark}
+% \fancyhead[LE,RO]{\thepage}
+% \fancyfoot[C]{\begin{tabular}{cc}
+%                 text & text
+%               \end{tabular}%
+% }
+
+% \makepagestyle{plain}
+% 	\makeevenfoot{plain}{}{\thepage~of~\pageref{LastPage}}{}
+% 	\makeoddfoot{plain}{}{\thepage~of~\pageref{LastPage}}{}
+% 	\makeevenhead{plain}{}{\begin{tabular}{cc}text & text\end{tabular}}{}
+
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+
+% \checkandfixthelayout
+

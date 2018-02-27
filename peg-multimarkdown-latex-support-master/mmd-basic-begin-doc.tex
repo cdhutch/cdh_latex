@@ -1,0 +1,35 @@
+%
+%	Get ready for the actual document
+%
+
+\usepackage[
+	plainpages=false,
+	pdfpagelabels,
+	pdftitle={\mytitle},
+	pagebackref,
+	unicode=true,
+	pdfauthor={\myauthor},
+	% pdfkeywords={\keywords}
+	]{hyperref}
+
+\usepackage{memhfixc}
+
+\input{mmd-title}
+
+
+\ifx\mydate\undefined
+\else
+	\date{\mydate}
+\fi
+
+
+
+\begin{document}
+
+\begin{center}
+\textbf{\mytitle} \\
+\myauthor \\
+\mydate
+\end{center}
+
+

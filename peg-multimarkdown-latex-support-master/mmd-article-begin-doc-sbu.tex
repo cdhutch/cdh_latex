@@ -1,0 +1,59 @@
+%
+%	For setup that must follow metadata included in the document
+%
+
+\usepackage[
+	plainpages=false,
+	pdfpagelabels,
+	pdftitle={\mytitle},
+	pagebackref,
+	pdfauthor={\myauthor},
+	pdfkeywords={\keywords}
+	]{hyperref}
+\usepackage{memhfixc}
+% \usepackage{lastpage}
+\usepackage{pdfpages}
+\makeevenhead{plain}{\textbf{SENSITIVE BUT UNCLASSIFIED}}{}{}
+\makeoddhead{plain}{\textbf{SENSITIVE BUT UNCLASSIFIED}}{}{}
+% \makeevenfoot{plain}{}{\thepage\ of \pageref{LastPage}}{\textbf{SENSITIVE BUT UNCLASSIFIED}}
+% \makeoddfoot{plain}{}{\thepage\ of \pageref{LastPage}}{\textbf{SENSITIVE BUT UNCLASSIFIED}}
+\makeevenfoot{plain}{}{\thepage}{\textbf{SENSITIVE BUT UNCLASSIFIED}}
+\makeoddfoot{plain}{}{\thepage}{\textbf{SENSITIVE BUT UNCLASSIFIED}}
+
+
+\input{mmd-title}
+
+
+\begin{document}
+
+\ifx\sbucoversheet\undefined
+	\includepdf{SBU_Cover_Sheet_CDH.pdf}
+\else
+	\includepdf{\sbucoversheet}
+\fi
+
+
+\VerbatimFootnotes
+
+\title{\mytitle}
+\author{\myauthor}
+
+\ifx\mydate\undefined
+\else
+	\date{\mydate}
+\fi
+
+\mainmatter
+\maketitle
+
+
+% Copyright
+\setlength{\parindent}{0pt}
+
+\ifx\mycopyright\undefined
+\else
+	\textcopyright{} \mycopyright
+\fi
+
+\setlength{\parindent}{1em}
+

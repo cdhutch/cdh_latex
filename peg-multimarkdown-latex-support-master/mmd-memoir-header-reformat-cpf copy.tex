@@ -1,0 +1,82 @@
+
+\pagestyle{fancy}
+\rhead{}
+\cfoot{\scriptsize\sffamily\slshape The electronic version is the offical approved document.\\Verify this is the correct version before use.}
+% \lhead{\begin{tabular}[b]{|p{4.0in}|p{2.5in}|} \hline Revision:~\revision & Document No:~\documentnumber\\ \hline Release Date:~\mydate&Page:~\thepage~of~\pageref{LastPage}\\ \hline Title:~\mytitle\end{tabular}}
+% \lhead{\begin{tabular}[b]{|p{4.0in}|p{2.125in}|} \hline Revision:~\revision & Document No:~\documentnumber\\ \hline Release Date:~\mydate&Page:~\thepage~of~\pageref{LastPage}\\ \hline \multicolumn{2}{|l|}{Title:~\mytitle~} \end{tabular}}
+
+% Hard-coded title due to mutlicolumn error
+\lhead{\begin{tabular}[b]{|p{4.0in}|p{2.125in}|} \hline Revision:~\revision & Document No:~\documentnumber\\ \hline Release Date:~\mydate&Page:~\thepage~of~\pageref{LastPage}\\ \hline \multicolumn{2}{|l|}{Title:~Operations Concept} \end{tabular}}
+
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+
+% Formatting of TOC
+
+\renewcommand\mempostaddapppagetotochook{\cftinserthook{toc}{BREAK}}
+\cftinsertcode{BREAK}{\changetocdepth{-10}}
+\let\normalchangetocdepth\changetocdepth % needed for later
+
+\makeatletter
+ \newcommand\appendixtableofcontents{
+  \begingroup
+  \let\changetocdepth\@gobble
+  \normalchangetocdepth{-10}
+  \cftinsertcode{BREAK}{\normalchangetocdepth{0}}
+  \renewcommand\contentsname{\normalsize APPENDIX}
+  \renewcommand{\aftertoctitle}{\par}
+  \renewcommand{\afterloftitle}{\par}
+  \renewcommand{\afterlottitle}{\par}
+  \renewcommand{\cftchapteraftersnum}{}
+  \tableofcontents*
+  \endgroup
+}
+\makeatother
+
+% \makeatletter
+% \settocpreprocessor{chapter}{%
+%   \let\tempf@rtoc\f@rtoc%
+%   \def\f@rtoc{%
+%     \texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
+% }
+% \makeatother
+% \makeatletter
+% \settocpreprocessor{section}{%
+%   \let\tempf@rtoc\f@rtoc%
+%   \def\f@rtoc{%
+%     \texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}%
+% }
+% \makeatother
+% \setlength{\cftbeforetoftitleskip}{-3em}
+\setcounter{tocdepth}{2}
+\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapters should use dots in ToC
+% \renewcommand{\contentsname}{\begin{center}\bfseries\large TABLE OF CONTENTS\end{center}}
+\renewcommand{\printtoctitle}[1]{\centering\Large\bfseries #1}
+\renewcommand{\printloftitle}[1]{\centering\Large\bfseries #1}
+\renewcommand{\printlottitle}[1]{\centering\Large\bfseries #1}
+\renewcommand{\aftertoctitle}{%
+	\par\nobreak\normalsize\bfseries SECTION\mbox{}\hfill{PAGE}\par\nobreak}
+\renewcommand{\afterlottitle}{%
+	\par\nobreak}
+\renewcommand{\afterloftitle}{%
+	\par\nobreak}
+
+% \renewcommand*{\afterlottitle}{\vspace{0em}}
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\listfigurename}{\normalsize TABLE OF FIGURES}
+\renewcommand{\listtablename}{\normalsize TABLE OF TABLES}
+% \renewcommand{\cftchapterfont}{\normalsize}
+\renewcommand{\cftchapteraftersnum}{.0}
+\renewcommand{\cftchapterfont}{\normalfont}
+\setlength{\cftbeforechapterskip}{0.0in}
+\renewcommand{\cftchapterpagefont}{\normalfont}
+% \renewcommand{\cftsectionfont}{\bfseries\normalsize\MakeTextUppercase}
+\renewcommand{\cftsectionfont}{\normalsize}
+\renewcommand{\cftfigurename}{FIGURE\space}
+\renewcommand{\cfttablename}{TABLE\space}
+% \setlength{\cftparskip}{0.0in}
+% \renewcommand{\appendixtocname}{APPENDIXDSDA}
+\renewcommand{\cftappendixname}{\normalsize APPENDIX\space}
+
+
