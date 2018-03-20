@@ -5,6 +5,9 @@
 % Define Page Styles
 %
 \pagestyle{fancy}
+\lhead{\sffamily\mytitle}
+\rhead{\sffamily\mydate}
+\setcolsepandrule{2mm}{0.25mm}
 % \setlength\hoffset{-0.2in}
 % \setlength\topmargin{-20pt}
 % \setlength\textheight{600pt}
@@ -12,11 +15,8 @@
 % \renewcommand{\headrulewidth}{0.0pt}
 % % Hard-coded title due to mutlicolumn error
 % \lhead{Left}
-\lhead{\sffamily\mytitle}
 % \chead{Center}
-\rhead{\sffamily\mydate}
 % \cfoot{\scriptsize\sffamily\slshape The electronic version is the offical approved document.\\Verify this is the correct version before use.}
-\setcolsepandrule{2mm}{0.25mm}
 
 \sffamily
 % \fancypagestyle{firststyle}
@@ -69,7 +69,7 @@
 %
 % Define Chapter Styles
 %
-\makechapterstyle{cpf}{%
+\makechapterstyle{checklist}{%
   \setlength{\afterchapskip}{0.0\baselineskip}
   \setlength{\beforechapskip}{2.0\baselineskip}
   \setlength{\headsep}{2.0\baselineskip}
@@ -81,7 +81,7 @@
   \renewcommand{\printchaptertitle}[1]{%
     \sffamily\bfseries\centering\normalsize\MakeUppercase{##1}}
 }
-\chapterstyle{cpf}
+\chapterstyle{checklist}
 
 % \makechapterstyle{appendix}{%
 %   \setlength{\afterchapskip}{\baselineskip}
@@ -170,8 +170,8 @@
 % 	{#2}
 % }
 % \makeatother
-% \usepackage{caption}
-% \captionsetup[table]{labelformat=empty,textfont={bf,sf}}
+\usepackage{caption}
+\captionsetup[table]{labelformat=empty,textfont={bf,sf}}
 \captionnamefont{\sffamily}
 \captiontitlefont{\sffamily\bfseries}
 % \renewcommand{\fnum@figure}{}
