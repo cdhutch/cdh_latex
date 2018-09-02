@@ -1,2 +1,14 @@
-.DS_Store
+**.DS_Store**
+**.acn
+**.aux
+**.fdb_latexmk
+**.fls
+**.glo
+**.idx
+**.ilg
+**.ind
+**.ist
+**.log
+**.out
+**.synctex.gz
 .DS_Store?

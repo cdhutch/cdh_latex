@@ -1,0 +1,16 @@
+Title:	Test Letter  
+Date:	September  1, 2018  
+Recipient:	Mr Smith  
+Recipient address:	123 Main St\
+	Some Town, ST 12345  
+Graphic signature:	true  
+Base header level:	2  
+Latex mode:	memoir
+Signature: cdh_signature.pdf  
+Latex config:	letterhead  
+Use XeLaTex:	true  
+
+
+[%recipientaddress]
+
+Dear [%Recipient],
