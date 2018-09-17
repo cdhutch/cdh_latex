@@ -3,13 +3,13 @@
 %
 
 % Black and White Option
-\ifx\blackandwhite\undefined
-	\def\musclogo{Logo-Color.pdf}
-\else
-	\definecolor{accent}{HTML}{000000}
-	\definecolor{returnaddress}{HTML}{000000}
-	\def\musclogo{Logo-BW.pdf}
-\fi
+% \ifx\blackandwhite\undefined
+% 	\def\musclogo{Logo-Color.pdf}
+% \else
+% 	\definecolor{accent}{HTML}{000000}
+% 	\definecolor{returnaddress}{HTML}{000000}
+% 	\def\musclogo{Logo-BW.pdf}
+% \fi
 
 
 \ifx\mydate\undefined
@@ -34,7 +34,7 @@
 	\ifx\graphicsignature\undefined
 	
 	\else
-		\resizebox{2in}{!}{\includegraphics{signature}}\\
+		\resizebox{2in}{!}{\includegraphics{cdh_signature}}\\
 	\fi
 \justauthor}
 \else
@@ -43,15 +43,13 @@
 % Create return address
 \def\returnaddress{\raggedleft 
 \footnotesize
-\renewcommand{\baselinestretch}{1.1}
+\renewcommand{\baselinestretch}{1.1}}
 
-\textbf{\myauthor} \\}
-
-\ifx\position\undefined
-\addtodef{\returnaddress}{}{\emph{\defaultposition}}
-\else
-	\addtodef{\returnaddress}{}{\emph{\position} \\}
-\fi
+% \ifx\position\undefined
+% \addtodef{\returnaddress}{}{\emph{\defaultposition}}
+% \else
+% 	\addtodef{\returnaddress}{}{\emph{\position} \\}
+% \fi
 
 \ifx\email\undefined
 \addtodef{\returnaddress}{}{\emph{\defaultemail}
@@ -67,17 +65,17 @@
 }
 \fi
 
-\ifx\department\undefined
-\addtodef{\returnaddress}{}{\textbf{\defaultdepartment}}
-\else
-	\addtodef{\returnaddress}{}{\textbf{\department} \\}
-\fi
+% \ifx\department\undefined
+% \addtodef{\returnaddress}{}{\textbf{\defaultdepartment}}
+% \else
+% 	\addtodef{\returnaddress}{}{\textbf{\department} \\}
+% \fi
 
-\ifx\afffiliation\undefined
-\addtodef{\returnaddress}{}{\textbf{\defaultaffiliation}}
-\else
-	\addtodef{\returnaddress}{}{\textbf{\affiliation} \\}
-\fi
+% \ifx\afffiliation\undefined
+% \addtodef{\returnaddress}{}{\textbf{\defaultaffiliation}}
+% \else
+% 	\addtodef{\returnaddress}{}{\textbf{\affiliation} \\}
+% \fi
 
 \ifx\address\undefined
 \addtodef{\returnaddress}{}{\defaultaddress}
@@ -92,19 +90,19 @@
 \fi
 
 
-\ifx\fax\undefined
-\addtodef{\returnaddress}{}{\defaultfax}
-\else
-	\addtodef{\returnaddress}{}{Fax \fax \\}
-\fi
+% \ifx\fax\undefined
+% \addtodef{\returnaddress}{}{\defaultfax}
+% \else
+% 	\addtodef{\returnaddress}{}{Fax \fax \\}
+% \fi
 
-\ifx\web\undefined
-\addtodef{\returnaddress}{}{\defaultweb
-}
-\else
-	\addtodef{\returnaddress}{}{ \web \\
-}
-\fi
+% \ifx\web\undefined
+% \addtodef{\returnaddress}{}{\defaultweb
+% }
+% \else
+% 	\addtodef{\returnaddress}{}{ \web \\
+% }
+% \fi
 
 \usepackage{mmd-letterhead}
 
