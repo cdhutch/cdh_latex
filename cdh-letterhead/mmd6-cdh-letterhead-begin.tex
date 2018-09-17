@@ -42,7 +42,7 @@
 
 % Create return address
 \def\returnaddress{\raggedleft 
-\footnotesize
+% \footnotesize
 \renewcommand{\baselinestretch}{1.1}}
 
 % \ifx\position\undefined
@@ -84,7 +84,7 @@
 ~
 }
 \fi
-
+\addtodef{\returnaddress}{}{\raggedright}
 
 % \ifx\fax\undefined
 % \addtodef{\returnaddress}{}{\defaultfax}
@@ -128,20 +128,20 @@
 
 % Insert return address
 
-\begin{figure}[t]
-\begin{adjustwidth}{-0.5in}{-0.5in}
-\begin{minipage}[l][\logoheight]{4in}
-	\coverlogo
-	\vspace*{\fill}
-\end{minipage} 
-\hfill 
-\begin{minipage}[r][\logoheight]{2in} 
-	{\renewcommand{\baselinestretch}{1.1}
-	\color{returnaddress}\returnaddress}
-	\vspace*{\fill}
-\end{minipage}
-\end{adjustwidth}
-\end{figure}
+% \begin{figure}[t]
+% \begin{adjustwidth}{-0.5in}{-0.5in}
+% \begin{minipage}[l][\logoheight]{4in}
+% 	\coverlogo
+% 	\vspace*{\fill}
+% \end{minipage} 
+% \hfill 
+% \begin{minipage}[r][\logoheight]{2in} 
+% 	{\renewcommand{\baselinestretch}{1.1}
+% 	\color{returnaddress}\returnaddress}
+% 	\vspace*{\fill}
+% \end{minipage}
+% \end{adjustwidth}
+% \end{figure}
 
 
 \pagestyle{letterhead}
@@ -153,6 +153,8 @@
 \setlength{\parskip}{12pt}
 
 %\input{mmd-title}
+
+\returnaddress
 
 % Insert Recipient
 \myrecipient
