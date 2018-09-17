@@ -51,19 +51,6 @@
 % 	\addtodef{\returnaddress}{}{\emph{\position} \\}
 % \fi
 
-\ifx\email\undefined
-\addtodef{\returnaddress}{}{\emph{\defaultemail}
-
-~
-
-}
-\else
-	\addtodef{\returnaddress}{}{\emph{\email}
-
-~
-
-}
-\fi
 
 % \ifx\department\undefined
 % \addtodef{\returnaddress}{}{\textbf{\defaultdepartment}}
@@ -87,6 +74,15 @@
 \addtodef{\returnaddress}{}{\defaultphone}
 \else
 	\addtodef{\returnaddress}{}{Tel \phone \\}
+\fi
+\ifx\email\undefined
+\addtodef{\returnaddress}{}{\emph{\defaultemail}
+~
+}
+\else
+	\addtodef{\returnaddress}{}{\emph{\email}
+~
+}
 \fi
 
 
