@@ -1,0 +1,2 @@
+# s|([[:print:]])[ ]:[ ]([[:print:]]*)$|\1:\\dotfill \\MakeUppercase{\2}|
+s|(.*)[ ]:[ ](.*)$|\1:\\dotfill \\MakeUppercase{\2}|
