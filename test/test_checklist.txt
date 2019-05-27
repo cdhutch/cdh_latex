@@ -1,0 +1,814 @@
+latex config:		checklist
+Title:				CRJ-700/900 (Delta VATSIM CRJ)
+Author:                          
+Date:				15 April 2018
+Base Header Level:	2  
+latex mode:			memoir  
+
+# Software Setup
+- Weights and Ground Services : ENTER VIA DAVE
+
+# Safety Check
+- Circuit Breakers (Panels 1/2) : CHECKED
+- Nosewheel Steering : OFF
+- Hydraulic Pumps : OFF
+- Landing Gear Lever : DOWN
+- Flight Spoiler Lever : 0
+- Slats/Flaps Level : SET TO ACTUAL POSITION
+- Radars (Both Panels) : OFF
+- ADG Manual Release : STOWED
+- EMER FLAP switch : NORMAL
+- Battery Master : ON
+	- Batteries : Verify 22 VDC min x 2
+- APU/AC Electrics : AS REQ'd/Establish
+	- GPU : Connect if Avail
+	- APU : Start if no GPU
+		- FIREX TEST switch : SELECT (FOR 2 SECONDS)
+		- APU PWR/FUEL switch : ON
+		- APU START/STOP switch : ON
+		- AC electrical SYNOPTIC : CHECK
+		- DC electrical SYNOPTIC : CHECK
+- Air Conditioning : Establish
+	- BLEED VALVES switch : AUTO
+	- L & R PACK switchlights : IN
+	- RECIRC FAN : ON
+- IRS : NAV
+- Gear and safety pins : ON BOARD
+- Hydraulic Pump 3A : ON
+- FMS Initialization : COMPLETE
+	- STATUS page
+		- ACTIVE DATABASE : CONFIRM
+		- UTC and DATE : CONFIRM
+	- POS INIT page
+		- Airport ICAO identifier : ENTER
+		- Airport reference position line key : DEPRESS
+		- SET POS line key : DEPRESS
+	- VOR CONTROL
+		- VOR and DME USAGE : CHECK ENABLED
+		- VORS : INHIBIT AS REQUIRED
+	- GPS CONTROL
+		- GPS : CHECK ENABLED
+		- Satellites : DESELECT AS REQUIRED
+	- FMS CONTROL
+		- FMS DATA KEY : LEFT
+	- DEFAULTS
+		- Climb speed : 290/.70-.74
+		- Cruise speed : 290/.74
+		- Descent speed : .74/290
+		- Descent angle : 3.0
+		- Fuel flow correction : 0.0
+	- MFD MENU page
+		- PF window : VNAV
+		- PM window : ON
+		- SPEED, ALTITUDE, and RNG TO ALT : SELECT
+
+|----------------------|---------------------------|
+| Circuit Breakers     | CLOSED                    |
+| N/W STRG             | OFF                       |
+| HYDRAULIC Pumps      | OFF                       |
+| LDG GEAR Lever       | DN                        |
+| FLIGHT SPOILER Lever | 0                         |
+| SLATS/FLAPS          | Set Actual Position       |
+| Radar                | OFF                       |
+| ADG Manual Release   | STOWED                    |
+| EMER FLAP            | NORMAL                    |
+| BATTERY MASTER       | ON                        |
+| APU/AC Electrics     | AS REQUIRED / ESTABLISHED |
+| IRS                  | NAV                       |
+| Emergency Equipment  | CHECKED                   |
+| Gear and Safety Pins | ON BOARD                  |
+| Airplane Documents   | CHECKED                   |
+| HYDRAULIC 3A         | ON                        |
+| FMS Initialization   | COMPLETE                  |
+[Safety Check]
+
+# Originating Check Check(FFOD)
+
+- Crew Oxygen and Masks : CHECKED / QUANTITY
+- AUDIO WARNING Panel (Copilot) : NORMAL
+	- DCU switches : GUARDED, NO LIGHTS
+- ELECTRICAL POWER panel : CHECKED
+	- All GEN switches : AUTO
+	- IDG DISC switches : GUARDED
+	- DC SERVICE switch : ON
+	- BATT MASTER : ON
+- FIRE DETECTION/FIREX MONITOR Test
+	- FIREX TEST switch : SELECT (for 2 secomnds)
+	- FIRE SYS OK message : VERIFY
+- L & R HYD SOV swtchlights : SELECTED OUT AND GUARDED
+- EXTERNAL LTS panel : CHECKED
+	- NAV switch : ON
+	- BEACON switch : OFF
+	- STROBE switch : OFF
+	- LOGO switch : AS REQUIRED
+	- WING INSP switch : AS REQUIRED
+	- LANDING LTS : OFF
+	- RECOG TAXI LTS : OFF
+- FUEL Panel
+	- All switches : OFF / FLUSHED
+	- INOP lights : CHECK ON
+- BLEED AIR panel : AUTO
+	- WING A/I CROSS BLEED switch : NORMAL
+	- BLEED VALVES switch : AUTO
+	- ISOL switch : CLOSED
+	- BLEED SOURCE switch : BOTH ENG
+- APU : Start 10 minutes prior to door closure
+- Start Panel : CHECKED
+	- L & R ENG START switches : OFF / FLUSHED
+	- IGNITION CONT switch : OFF / FLUSHED
+`\newpage`{=latex}
+- HYDRAULIC panel : CHECKED
+	- HYDRAULIC switches : ALL OFF
+	- EICAS Control Panel (ECP) : HYD synoptic
+	- Fluid quantities / termperatures : CHECK
+	- PUMP 1, 3B, and 2 switches : ON
+		- Pressures, quantities, temperatures : CHECK
+	- EICAS Control Panel (ECP) : STAT synoptic
+	- PUMP 1, 3B, and 2 switches : AUTO
+		- Pressure depletion : CHECK
+	- PUMP 3A : ON
+		- Pressure, quantity, and temperature : CHECK
+- ELT
+	- ELT : ARM/RESET
+	- PASS OXY switchlight : VERIFY GUARDED NO LIGHT
+- CABIN PRESS panel : CHECKED
+	- EICAS Control Panel : ECS synoptic
+	- MAN ALT switch and RATE selector : CENTERED
+	- EMER DEPRESS switch : OFF / GUARDED
+	- PRESS CONTROL switch : OFF / FLUSHED
+	- MAN RATE switch : FULL DECR
+- AIR CONDITIONING panel : CHECKED
+	- PACK switches : AUTO
+	- RECIRC FAN : ON
+	- Temperature control mode : AUTO
+	- RAM AIR switch : OFF / GUARDED
+	- WING and COWL switches : OFF
+- Ice Detection Test
+	- EICAS Control Panel : PRI and STAT pages
+	- DET TEST switch : SELECT AND HOLD
+	- ADS HEAT TEST OK message : VERIFY
+	- DET TEST switch : RELEASE
+- WSHLD switches : LOW
+	- L and R Probe switches : OFF
+- EMER LTS switch : ARM
+- Standby Compass : CHECKED
+- STALL Test : COMPLETE
+	- STALL PTCT PUSHER switches : ON
+	- STALL switch (either) : SELECT Momentarily
+- NW STRG switch : OFF
+- Clocks : CHECKED
+- EFIS Control panels : CHECKED
+	- Display control switches : MAP, RANGE 25
+	- Air data reference switches : FMS1 / AS REQUIRED
+	- BARO switch : SET
+	- Display Reversionary Panel : NORM
+- Instrument panels : CHECKED
+	- Primary flight display : CHECK
+		- Annunciations : CHECK NONE DISPLAYED
+		- ADIs and RMIs : CROSS-CHECK
+	- Altimeter readout : CROSS-CHECK w/ CO-PILOT
+	- Multifunction display : CHECK NO FLAGS
+	- CVR TEST switch : PRESS AND HOLD 5 SEC
+- EICAS and Standby instruments : CHECKED
+	- EICAS primary display : CHECK
+		- No Warning and/or Caution Messages
+		- All other indications Normal
+	- Standby altimeter / airspeed indictor : CROSS-CHECK
+	- EICAS secondary display : CHECK
+		- Annunciations / messages
+		- All other indications normal
+- ANTI SKID Test
+	- ANTI-SKID switch : ARMED
+	- ANTI-SKID switch : OFF
+	- A/SKID OUTBD and INBD : VERIFY
+	- ANTI-SKID switch : ARMED
+- MLG BAY OVHT TEST
+	- MLG BAY switch : HOLD AT OVHT
+	- MLG BAY switch : RELEASE
+	- OVHT TEST siwtch : HOLD AT WARN FAIL
+	- OVHT TEST switch : RELEASE
+- Upper Pedestal : CHECKED
+	- FMS : Set as Required
+	- Brake temperature : CHECK
+	- MUTE HORN switch : GUARDED, LIGHT OUT
+	- LDG GEAR lever : DN
+	- ENGINES SYNCH : N1
+	- IND LTS switch : BRT or DIM
+	- GRND PROX switches : CHECKED
+		- TERRAIN switch : GUARDED NO LIGHTS
+		- FLAP switch : GUARDED NO LIGHTS
+- Thrust Lever Quadrant
+	- PITCH and ROLL DISC handles : IN / STOWED
+	- GND LIFT DUMPING switch : AUTO
+	- LH & RH THRUST REVERSER switches : ARMED
+	- Thrust Levers : CHECK AT SHUTOFF
+- Avionics : CHECKED
+	- Radio tuning units (both) : CHECK NORMAL AND NO MESSAGES
+		- Display Control Panel TCAS switch: SELECT
+		- ALT line select key : SELECT
+	- Public Address System : TEST
+		- ACP transmit knob : SELECT PA
+		- Interphone control unit : Push PA switchlight
+	- Weather Radar Mode Select Switch : BOTH OFF
+	- RTU and FMS TUNE INHIBIT switches : OFF / FLUSHED
+	- Back-up Mode selector switch : STBY
+	- DSPLY FAN switch : NORM
+	- IRS switch : NAV
+- Trims : Checked
+	- STAB and MACH TRIM switches : Engage
+	- AIL and RUD trim : TEST  THEN NEUTRAL
+- YAW DAMPER switches : ENGAGE
+- Source Select Panel : NORM
+- Lower Pedestal : CHECKED
+	- PARKING BRAKE : AS REQUIRED
+	- LANDING GEAR manal release handle : STOWED
+	- ADG manual deploy handle : STOWED
+	- EMER FLAP switch : NORMAL
+- Originating Check : CALL
+
+|-----------------------------------------|---------------|
+| Internal and External Pre-Flight Checks | COMPLETE      |
+| Pedals, Seats, and Harness              | ADJUSTED      |
+| Crew Oxygen and Masks                   | CHECKED (QTY) |
+| AUDIO WARNING Panel                     | CHECKED       |
+| ELECTRICAL POWER Panels                 | CHECKED       |
+| FIRE DETECTION/FIREX MONITOR Test       | COMPLETE      |
+| EXTERNAL LTS Panel                      | CHECKED       |
+| FUEL Panel                              | CHECKED       |
+| BLEED AIR Panels                        | CHECKED       |
+| APU Panel                               | AS REQ'D      |
+| Start Panel                             | CHECKED       |
+| HYDRAULIC Panel                         | CHECKED       |
+| ELT                                     | ARM/RESET     |
+| CABIN PRESS Panel                       | CHECKED       |
+| AIR-CONDITIONING Panel                  | CHECKED       |
+| Ice DET TEST                            | COMPLETE      |
+| EMER LTS                                | ARM           |
+| Standby Compass                         | CHECKED       |
+| Clocks                                  | CHECKED       |
+| Side Control Panels                     | CHECKED       |
+| Stall Test                              | COMPLETE      |
+| N/W STRG                                | OFF           |
+| Clocks                                  | SET           |
+| EFIS Control Panels                     | CHECKED       |
+| Instrument Panels                       | CHECKED       |
+| EICAS and Standby Instrument            | CHECKED       |
+| Anti-Skid Test                          | COMPLETE      |
+| MLG Bay Overheat Test                   | COMPLETE      |
+| Upper Pedestal                          | CHECKED       |
+| Thrust Lever Quadrant                   | CHECKED       |
+| Avionics                                | CHECKED       |
+| Trims                                   | CHECKED       |
+| YAW DAMPER                              | ENGAGE        |
+| Source Select Panel                     | NORM          |
+| Lower Pedestal                          | CHECKED       |
+[Originating Check]
+
+# Before Start Flow and Check (T-25 MIN)
+- ATIS : OBTAIN
+- Crew Oxygen / Masks : CHECKED / QUANTITY
+- PASS SIGNS : ON
+	- NO SMKG switch : ON
+	- SEAT BELTS switch : ON
+- Altimeters : SET
+- ATC Clearance : OBTAIN
+- FMS Flight Plan Programming
+	- FLPN page
+		- Route: ENTER
+	- DEP/ARR page
+		- Runway, SID, and STAR : SELECT
+	- FLPN page
+		- Flight plan : REVIEW
+		- Total distance : VERIFY
+		- Flight plan : EXEC
+		- Flight plan : COPY ACTIVE
+	- RADIO page
+		- Select as required
+	- PERF MENU page
+		- Advisory VNAV : ENABLE
+		- If fuel not in PREDICTED performance mode:
+			- PERF MENU : SELECT
+			- FUEL MANAGEMENT : SELECT
+			- PREDICTED performance mode : SELECT
+	- PERF INIT page 1
+		- Transfer from Dave or Manual Entry
+		- Pass : ENTER
+		- Cargo : ENTER
+		- ZFW : ENTER
+		- Actual Fuel on board : ENTER
+		- CRZ ALT : ENTER
+		- ALTN CRZ ALT : ENTER
+	- PERF INIT page 2
+		- Average wind component: ENTER INTO CLIMB, CRUISE, DESCENT
+		- ISA deviation : ENTER
+	- VNAV page 1
+		- TGT SPEED : 290/.70-.74 OR CI SPEED
+		- SPD/ALT LIMIT : 250/10000
+		- TRANS ALT : VERIFY
+	- VNAV page 2
+		- TGT SPEED : 290/.74 OR CI SPEED
+	- VNAV page 3
+		- TGT SPEED: .74/290 OR CI SPEED
+		- SPD/ALT LIMIT : 250/10000
+		- TRANS FL : VERIFY
+- V-Speeds : SET VIA DAVE
+- LDG ELEV : SET
+- Radios and Navaids : SET FOR DEPARTURE
+	- Navigation Source : SELECT AND IDENTIFY
+	- Flap Retraction Altitude (FRA) on MDA bug : 1000' AFE
+	- Course 1 and 2 : SET
+	- Airspeed bug : 200 KIAS
+	- Heading bug : RUNWAY HDG
+	- ALT preselect : INITIAL ALTITUDE
+- Takeoff Briefing : COMPLETE
+
+|-----------------------|-------------------|
+| Crew Oxygen and Masks | CHECKED (QTY)     |
+| PASS SIGNS            | ON                |
+| LDG ELEV              | SET               |
+| Altimeters            | SET (XX.XX)       |
+| FMS / IRS             | SET               |
+| Radios and Navaids    | SET FOR DEPARTURE |
+| Takeoff Briefing       | COMPLETE           |
+[BEFORE START CHECK]
+
+`\autoref{\newpage}`{=latex}
+
+## Cleared to Start Check
+
+- APU/AC Electrics : CHECK
+	- APU : Verify Started
+	- APU Generator : Verify ON
+	- External Power : DISCONNECT VIA DAVE
+- Take-off Data : SET VIA DAVE
+- Doors : CLOSED/LOCKED VIA DAVE
+- BEACON switch : ON
+- Fuel pumps and quantity : ON QUANTITY
+- Hydraulic Pumps : AUTO / ON
+	- Pumps 1B, 2B, 3B : AUTO
+	- Pump 3A : ON
+- Nosewheel Steering : OFF
+- ACARS : START FLIGHT
+- Chocks : REMOVE VIA DAVE
+- Cleared to Start Checklist Above Line : CALL
+- Pushback : INITIATE
+
+| -------------------- | ---------------------------- |
+| APU/AC Electrics     | CHECK                        |
+| Papers               | ON BOARD                     |
+| Take-Off Data        | SET                          |
+| Doors                | CLOSED/LOCKED                |
+| BEACON               | ON                           |
+| Fuel Pumps and Qty   | ON XXXX (QTY)                |
+| HYDRAULIC PUMPS      | AUTO / ON                    |
+[Cleared to Start Checklist]
+
+## Engine Start - APU Assist
+
+- Thrust Levers (Both) : CHECK AT SHUT OFF
+- R ENG : START
+- When N2 > 20% and ITT < 120 deg C:
+	- L or R Thrust Lever : Advance to IDLE
+- Engine Instruments : CHECK
+- L ENG : START
+- When N2 > 20% and ITT < 120 deg C:
+	- L or R Thrust Lever : Advance to IDLE
+- Engine Instruments : CHECK
+- APU EGT indications : CHECK WNL
+
+
+## After Start Check
+
+- GEN 1 and GEN 2 : AUTO
+- BLEED VALVE and PACKs : AUTO/ON
+	- L and R PACK OFF Status Messages : VERIFY OUT
+- Anti-Ice : AS REQUIRED
+- PROBES switches : LH & RH ON
+- Electrics : Checked
+	- Generators : POWERING RESPECTIVE BUSES
+	- AC Frequencies, Voltages, and Loads : WNL
+	- DC TRUs : VERIFY POWERED
+	- Voltages and Loads : VERIFY WNL
+	- MAIN TIE, CROSS TIE, ESS TIE : VERIFY TIE OPEN
+	- GEN 1 OFF and GEN 2 OFF messages : VERIFY OFF
+- Rudder
+	- N/W STRG : VERIFY OFF
+	- EICAS Control Panel : F/CTL
+	- Rudder travel : CHECK
+- N/W STRG : ARMED
+- After Start Checklist : CALL
+
+|----------------------|---------|
+| GEN 1 and GEN 2      | AUTO    |
+| BLEED VALVES & PACKs | AUTO/ON |
+| ANTI-ICE             | REQ'D   |
+| PROBES               | ON      |
+| Electrics            | CHECKED |
+| Rudder               | CHECKED |
+| Nosewheel Steering   | ARMED   |
+[After Start Checklist]
+
+## Taxi Check
+- Fuel X-Flow : MAN/OFF
+	- XFLOW AUTO OVERRIDE : SELECT
+	- MAN XFLOW White Status : VERIFY
+	- GRAV XFLOW OPEN advisory : VERIFY
+	- L XFLOW ON/R XFLOW ON : VERIFY
+- IGNITION / ANTI-ICE : AS REQUIRED
+- Flight Instruments : CHECKED
+- FMS : VERIFY AUTOTUNE ON RTU
+- BRAKE TEMP : CHECKED
+	- All BTMS indicators : GREEN
+- Radar / Terrain Display : AS REQUIRED
+- Flaps : SET
+- Flight controls : CHECKED
+	- EICAS Control Panel : F/CTL
+	- Ailerons : Check full deflection
+	- Elevator : Check full deflection
+- Trims : GREEN
+	- Aileron and rudder trims : GREEN
+	- STAB TRIM CH1 and CH2 : ENGAGED
+	- Stabilizer trim : SET
+- Thrust Reversers : ARMED
+- EICAS Control Panel : PRI and STAT SELECTED
+- CAS : CHECKED AND CLEARED
+	- TO CONFIG OK advisory : CHECK ON
+- Transponder : SELECT 1 OR 2
+- RECOG/TAXI lights : ON
+
+|--------------------|------------------------|
+| SLATS / FLAPS      | ___ SET / INDICATING   |
+| Flight Controls    | CHECKED                |
+| Trim               | GREEN, CENTERED, __.__ |
+| Thrust Reversers   | ARMED                  |
+| Flight Instruments | Checked                |
+| FMS                | AUTOTUNE               |
+| BRAKE TEMP         | Checked                       |
+[Taxi Checklist]
+
+
+
+## Before Takeoff Flow and Check
+
+- When cleared onto runway:
+	- STROBES : ON
+	- LANDING LTS : ON x 3
+	- Ignition/Anti-Ice : As Required
+		- Used if icing conditions expected prior to climb thrust reduction
+	- CAS messages : Verify
+- When lined up on runway:
+	- Compass heading : VERIFY
+	- TOGA : DEPRESS
+
+|-----------------------|---------------------|
+| Lights and Strobes    | AS REQUIRED         |
+| FUEL X-FLOW           | MAN/OFF             |
+| IGNITION/ANTI-ICE     | AS REQUIRED         |
+| Flight Attendant      | NOTIFIED            |
+| Transponder / TCAS    | ON / AS REQUIRED    |
+| Radar/Terrain Display | AS REQUIRED         |
+| CAS                   | Checked and Cleared |
+[BEFORE TAKE-OFF CHECK]
+
+
+## Takeoff
+
+- Throttles : Near Vertical (~70% N1)
+- When stabilized:
+	- Throttles : ADVANCE TO TOGA detent
+- At V_R: 
+	- ROTATE
+- With positive rate of climb:
+	- GEAR : UP
+- At V2 + 10 to 15 knots:
+	- SPEED MODE : SELECT
+- Above 400' AGL
+	- HDG or NAV mode : SELECT
+- Above 600' AGL
+	- Autopilot : ENGAGE
+- At Acceleration Altitude (1000' AGL):
+	- Speed : BUG to 200 KIAS
+	- FLAPS : RETRACT ON SCHEDULE
+	- Thrust Levers : CLIMB DETENT
+- At 3000' AFE:
+	- Speed : 250 KIAS
+
+|       |     8     |    20    |
+|-------|-----------|----------|
+| Set 8 |           | V2 + 12  |
+| Set 1 | V2 + 12   | V2 + 20  |
+| Set 0 | VFTO - 15 | VFTO -15 |
+[Flap Retraction Schedule]
+
+`\newpage`{=latex}
+
+## Climb Check
+
+- Fuel X-FLOW : AUTO
+	- AUTO OVERRIDE switch : OFF
+	- Fuel quantity / distribution : MONITOR
+- Bleeds and APU : SET
+	- BLEED SOURCE : AUTO
+	- APU : SHUT DOWN
+- Passing 10K':
+	- Lights and PASS SIGNS : AS REQUIRED
+	- Thrust Reverser switches : OFF
+	- CAS : CHECKED AND CLEARED
+
+ 
+|-------------------|---------------------|
+| Gear and Flaps    | UP                  |
+| FUEL X-FLOW       | AUTO                |
+| Bleeds/APU        | Set / AS REQUIRED   |
+| Lights/PASS SIGNS | AS REQUIRED         |
+| Thrust Reversers  | OFF                 |
+| CAS               | CHECKED AND CLEARED |
+[Climb Check]
+
+## Vertical Nav Planning
+
+- Climb
+	- At 10K':
+		- AP Mode : VS + 1000 FPM
+	- Reaching 290 KIAS:
+		- AP Mode : VS 1600 FPM
+	- Control IAS vith VS
+- Descent
+	- Altitude Restrictions : SET LEGS PAGE and EXEC
+	- DIR INTC Page : SELECT
+	- When angle to waypoint > 2.5 degree:
+		- VS Mode : ENGAGE
+
+
+## Descent 
+- ATIS : Record
+- Desination Airport Landing Field Elevation : SET
+- Fuel : CHECKED
+- Altimeters : SET
+	- Standby altimeter : SET QNH
+- TCAS : AS REQUIRED
+- Radar : AS REQUIRED
+- Terrain Display : AS REQUIRED
+- CAS : CHECKED AND CLEARED
+- Landing Data : SET
+	- V_{2GA}, V_T : SET VIA DAVE
+	- Select STAR, approach, and transition
+	- Insert V_{REF} as speed constraint on LEGS page abeam runway or MAP
+	- Approach Frequencies : Preselect in RTUs
+	- DA / MDA / FRA : Set on both PFDs
+	- NAVAIDS : Set
+	- Bearing Pointers : AS REQUIRED
+- Approach : BRIEF
+
+
+|-------------------|---------------------|
+| LDG ELEV          | SET                 |
+| Fuel              | Checked             |
+| TCAS              | AS REQUIRED         |
+| Radar             | AS REQUIRED         |
+| Terrain Display   | AS REQUIRED         |
+| CAS               | CHECKED AND CLEARED |
+| Landing Data      | SET                 |
+| Approach Briefing | COMPLETE            |
+[Descent Check]
+
+
+`\newpage`{=latex}
+
+## 10,000 FOOT CHECK
+
+- APU and bleeds : SET
+- Lights and PASS SIGNS : AS REQUIRED
+	- RECOG/TAXI LTS : ON
+	- PASS SIGNS : ON
+- Thrust Reversers : ARM
+
+|---------------------|-------------|
+| Altimeters          | XX.XX SET   |
+| APU and bleeds      | SET         |
+| Lights / PASS SIGNS | AS REQUIRED |
+[Approach Check]
+
+- Approach Navigation Transition from FMS to NAV
+	- Heading bug : SYNC
+	- Heading mode : Select
+	- RTU : Select appropriate frequency
+	- NAV source :  Confirm correct course
+	- FCP : Select appropriate mode
+
+|   Approach  |  PF |  PM | FCP Selection |
+|-------------|-----|-----|---------------|
+| ILS         | LOC | LOC | APPR          |
+| LOC or LDA  | LOC | LOC | NAV           |
+| BCRS        | LOC | LOC | B/C           |
+| VOR (FMS)   | FMS | VOR | NAV           |
+| VOR (Raw)   | VOR | VOR | NAV           |
+| GPS or RNAV | FMS | FMS | NAV           |
+[FCP Approach Modes]
+
+## Precision Approach
+
+- When appropriate:
+	- Speed : 200 KIAS
+	- FLAPS : 1
+	- Speed : 190 KIAS
+- At Initial segment or entering downwing
+	- FLAPS : 8
+	- Speed : 180 KIAS
+- Base Leg:
+	- FLAPS : 20
+	- Speed : 170 KIAS
+- When cleared for approach:
+	- APPR mode : ENGAGE
+- At glideslope capture:
+	- GEAR : DOWN
+	- FLAPS : 30
+	- ALT Preselector : SET MISSED APPROACH ALTITUDE
+- Not lower thn 1500' AGL:
+	- FLAPS : 45
+	- Speed : V_REF + factor
+	- Landing Checklist : CALL
+- At Final Approach Fix:
+	- Fix name, altitude, and flags : CHECK
+- At DH/DA and landing is feasible:
+	- Autopilot : DISCONNECT NLT 80' AGL
+
+|------------------|--------------------|
+| PASS SIGNS       | BOTH ON            |
+| Thrust Reversers | ARMED              |
+| Landing Gear     | DOWN, 3 GREEN      |
+| Flaps            | ___ deg INDICATING |
+[Landing Checklist]
+
+## Go-Around
+
+- At Go-Around Initiation
+	- TOGA button : DEPRESS
+	- Throttles : TOGA detent
+	- Flaps : 8
+- With positive rate of climb
+	- Gear : UP
+- At V2 + 10 to 15:
+	- SPEED MODE : SELECT
+- Above 400' AGL:
+	- HDG or NAV mode : SELECT
+	- HEADING or FMS FMA : Verify
+- Above 600' AGL:
+	- Autopilot : ENGAGE
+- At Acceleration Altitude:
+	- Speed Bug : 200 KIAS
+	- Flaps : RETRACT ON SCHEDULE
+	- Thrust Levers : CLIMB
+- At 3000' AGL:
+	- Accelerate as required
+
+## Normal Landing
+
+- At 50' AGL:
+	- Throttles : SLOWLY CLOSE TO IDLE
+- At 30'-20' AGL:
+	- FLARE : INTIATE
+- At Main gear touchdown:
+	- Thrust Reversers : ENGAGE
+- At Nosewheel Touchdown:
+	- Wheel Brakes : Smoothly Apply
+- At 60 KGS:
+	- Thrust Reversers : CLOSE
+
+`\newpage`{=latex}
+
+
+## After Landing Flow
+
+- APU : As Req'd
+- Transponder/Radar : As Req'd / OFF
+- SLATS / FLAPS : UP
+- Lights and strobes : AS REQUIRED
+	- LANDING LTS switches : OFF
+	- STROBE switch : OFF
+	- RECOG TAXI LTS switch : AS REQUIRED
+- PROBES switches : OFF
+
+
+## Shutdown Check
+
+- Chocks and Brakes : AS REQUIRED
+- Electrics
+	- APU or AC External Power : Check Online
+- Thrust Levers : SHUT OFF
+- SEAT BLTS switch : OFF
+- ANTI-ICE : OFF
+	- WING switch : OFF
+	- LH and RH COWL switches : OFF
+- Fuel Pumps : OFF
+- HYDRAULIC 3A pumps : AS REQUIRED
+- BEACON : OFF
+- N/W STRG switch : OFF
+
+|----------------------------|-------------|
+| Chocks and Brakes          | AS REQUIRED |
+| Electrics                  | SET         |
+| Fuel Pump Check Valve Test | COMPLETE    |
+| Thrust Levers              | SHUTOFF     |
+| SEAT BELTS                 | OFF         |
+| ANTI-ICE                   | OFF         |
+| Fuel Pumps                 | OFF         |
+| HYDRAULIC  3A              | As Required |
+| BEACON                     | OFF         |
+| N/W STRG                   | OFF         |
+[Shutdown Checklist]
+
+`\autoref{\FloatBarrier}`{=latex}
+
+
+|-------------------|--------|
+| Chocks and Brakes | IN/OFF |
+| IRS               | OFF    |
+| Thrust Reversers  | OFF    |
+| EMER LTS          | OFF    |
+| WSHLD             | OFF    |
+| AFT CARGO         | OFF    |
+| HYDRAULIC Pumps   | OFF    |
+| EXTERNAL LTS      | OFF    |
+| APU START/STOP    | OFF    |
+| APU PWR FUEL      | OFF    |
+| DC SERVICE        | OFF    |
+| BATTERY MASTER    | OFF    |
+| DOME LIGHT        | OFF    |
+| Boarding Lights   | OFF    |
+[Terminating Check]
+
+
+
+## Non-Precision Approach
+
+- When appropriate:
+	- Speed : 200 KIAS
+- When further speed reduction is required:
+	- Flaps : 1; SPEED 190 KIAS
+	- Flaps : 8; SPEED 180 KIAS
+	- Flaps : 20; SPEED 170 KIAS
+- When tracking altitude:
+	- ALT Preselector : SET TO NEXT ALTITUDE
+- When approaching descent point:
+	- VS mode : SELECT AT FIX
+- At 3 to 5 miles before FAF:
+	- Landing gear : DOWN
+	- Flaps : 30; SPEED 160 KIAS
+- At 1 to 2 miles before FAF:
+	- Flaps : 45
+	- Speed: VREF + 5-10 KIAS
+	- Landing Checklist : COMPLETE
+- At FAF:
+	- Fix name, altitude, and flags : CHECK
+	- Chronometer : START
+	- Autopilot : DISCONNECT ABOVE 400' AGL
+- When tracking MDA:
+	- ALT Preselector : SET TO MISSED APP. ALT
+- When runway in sight:
+	- Landing : CONTINUE VISUALLY
+	- Flight Director : OFF
+
+
+
+## Visual Approach
+
+- Enter visual pattern
+	- Altitude : AS REQUIRED (1500' AGL)
+- Prior to abeam:
+	- FLAPS : 1; SPEED 190 KIAS
+	- FLAPS : 8; SPEED 180 KIAS
+- When abeam:
+	- FLAPS : 20; SPEED 170 KIAS
+	- Landing Gear : DN PRIOR TO TURNING BASE
+- On base:
+	- DESCENT : INITIATE 3 DEG G/S
+	- FLAPS : 30; SPEED 160 KIAS
+- Above 500' on final:
+	- FLAPS : 45
+	- Speed: VREF + FACTOR
+- Landing Checklist : COMPLETE
+- Autopilot : DISCONNECT NLT 400' AGL
+- Altitude Preselector : AS REQUIRED
+- Flight Director : OFF
+
+`\autoref{\newpage}`{=latex}
+## Circling Approach
+
+- After FAF:
+	- Flaps : 30
+	- Landing Gear : DOWN
+- When Circling MDA captures:
+	- Circling MDA : MAINTAIN
+	- Altitude Preselector : Set to Missed Approach Altitude
+- At desired position, commence base turn towards final:
+	- Descent : INITIATE 3 deg DESCENT
+	- Autopilot : DISCONNECT ABOVE 400' AGL
+- When in position to land NLT 500'
+	- Flaps: 45
+	- Speed: V_REF + 10
+	- Landing Checklist : COMPLETE
+	- Flight Director : OFF
+
+
+`\autoref{\newpage}`{=latex}
