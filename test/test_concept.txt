@@ -1,0 +1,8 @@
+Test Concept
+
+- Have set of Master MMD6, TeX, and PDF files
+- Run testing script
+	- For each MMD6 file:
+		- Compile TeX document to External folder
+		- Compare against master TeX script and output diff
+		- Compile PDF document to External folder

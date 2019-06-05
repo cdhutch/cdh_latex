@@ -1,0 +1,30 @@
+%
+%	Configure LaTeX to produce an article using the memoir class
+%
+
+\documentclass[oneside,article,12pt,twocolumn,letterpaper,showtrims,oldfontcommands]{memoir}
+
+%
+%	Generic Configuration for memoir-based documents
+%
+
+\usepackage{layouts}[2001/04/29]
+
+% Basic page layout configuration
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+
+
+% Use 5 x 8 inch page layout
+\input{mmd6-memoir-layout-5x8}
+
+
+% Use default packages for memoir setup
+\input{mmd6-memoir-packages-checklist}
+
+
+% Configure default metadata to avoid errors
+\input{mmd6-default-metadata-checklist}
+
+% Set Checklist-specific formatting
+\input{mmd6-memoir-header-reformat-checklist}
