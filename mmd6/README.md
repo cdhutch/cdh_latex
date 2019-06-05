@@ -2,7 +2,7 @@ Title:	LaTeX Support Files
 Author:	Fletcher T. Penney  
 Date:	2017-03-27  
 
-
+ 
 ## Introduction ##
 
 This folder includes the LaTeX support files for MMD.  They have been renamed
