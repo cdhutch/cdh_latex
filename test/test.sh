@@ -1,0 +1,16 @@
+xelatex test_mmd_letter.tex
+rm *.acn
+rm *.aux
+rm *.fdb_latexmk
+rm *.fls
+rm *.glo
+rm *.idx
+rm *.ilg
+rm *.ind
+rm *.ist
+rm *.log
+rm *.out
+rm *.gz
+rm *.xdv
+rm *.dvi
+/Applications/Skim.app/Contents/MacOS/Skim test_mmd_letter.pdf

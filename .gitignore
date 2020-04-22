@@ -1,2 +1,17 @@
 *.DS_Store
 */.DS_Store
+test/*.acn
+test/*.aux
+test/*.fdb_latexmk
+test/*.fls
+test/*.glo
+test/*.idx
+test/*.ilg
+test/*.ind
+test/*.ist
+test/*.log
+test/*.out
+test/*.pdf
+test/*.gz
+test/*.xdv
+test/*.dvi
