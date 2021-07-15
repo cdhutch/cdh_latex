@@ -22,7 +22,11 @@
 \usepackage{etoolbox}
 \usepackage{footmisc}
 \usepackage{fontspec}
-\setsansfont{Helvetica}
+\IfFontExistsTF{Helvetica}{
+    \setsansfont{Helvetica}
+}{
+    \setsansfont{Arial}
+}
 \setmainfont{Times New Roman}
 % \defaultfontfeatures{Ligatures=TeX}
 % \setmainfont{EB Garamond}
